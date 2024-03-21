@@ -199,7 +199,7 @@ export class Surreal {
     }
 
     delete(id: string) {
-        return this.send("patch",`["${id}"]`)
+        return this.send("delete",`["${id}"]`)
     }
 
     async query<T extends any[] = Record<string,any>[]>(ql: string, params?: object): Promise<T> {
